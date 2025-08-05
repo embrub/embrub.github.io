@@ -202,10 +202,13 @@ a:not(.img), a:not(.inverse) {
 
 .nav-list {
   display: flex;
+  margin: 1.4rem 0;
+
 }
 
 .nav-list a, input[type=submit] {
   font-size: 1.15rem;
+  padding: 0 0.15rem;
   text-decoration: none;
   display: block;
   margin-right: 2rem;
@@ -227,6 +230,10 @@ a.inverse, input[type=submit] {
   margin-right: 1rem;
   border: 1px solid var(--black);
   margin: 0;
+}
+
+input[type=submit] {
+  width: 100%;
 }
 
 a.inverse:active, input[type=submit]:active {
@@ -310,6 +317,27 @@ textarea {
 }
 
 @media only screen and (max-width: 700px) {
+  nav, footer {
+    padding: 0 1rem;
+    height: min-content;
+    justify-content: flex-start;
+  }
+  .nav-list, footer p {
+    margin: 1rem 0;
+  }
+  /* nav {
+    position:relative;
+  } */
+  .nav-list a, input[type=submit] {
+    font-size: medium;
+    margin-right: 1.5rem;
+  }
+  .spacing {
+    margin-bottom: 2rem;
+  }
+  .hide {
+    display: none;
+  }
   .row {
     display: inline-block;
   }
@@ -364,14 +392,10 @@ textarea {
   .right {
     flex-grow: 1; 
     flex-direction: column;
-    padding-right: 5%;
-  }
-  nav, footer {
-    justify-content: flex-start;
-    padding: 0 1rem;
+    padding-right: 0;
   }
   h1 {
-    font-size: 6rem;
+    font-size: 4.5rem;
     margin: 0;
 
     transform: none;
@@ -380,5 +404,4 @@ textarea {
     -ms-transform: none;
     -o-transform: none;
   }
-
 }
